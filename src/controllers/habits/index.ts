@@ -14,7 +14,6 @@ const getHabits = async (req: Request, res: Response) : Promise<void> => {
 const addHabit = async (req: Request, res: Response) : Promise<void> => {
   try {
     //Casts the body's request as an IHabit. The Pick part is an extra layer to avoid typos
-    console.log(req)
     const body = req.body as Pick<IHabit, "name" | "description" | "status">
 
     const habit : IHabit = new Habit({
